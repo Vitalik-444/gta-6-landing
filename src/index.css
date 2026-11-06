@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { @apply bg-night text-snow font-sans antialiased overflow-x-hidden; }
+:focus-visible { outline: 2px solid #36B9D8; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@layer components {
+  .btn { @apply inline-flex items-center gap-2 px-6 py-3 font-accent font-bold text-sm uppercase tracking-widest transition-all duration-300; }
+  .btn-pink { @apply bg-pink text-night hover:shadow-[0_0_28px_#FF4FA3] hover:-translate-y-0.5; }
+  .btn-line { @apply border border-snow/60 text-snow hover:border-ocean hover:text-ocean hover:shadow-[0_0_24px_#36B9D855]; }
+  .h-xl { @apply font-display leading-[0.9] tracking-wide text-5xl sm:text-7xl lg:text-8xl; }
+  .tag { @apply font-accent text-xs uppercase tracking-[0.25em] text-ocean; }
+  .section { @apply px-5 sm:px-10 lg:px-16 py-24 max-w-[1500px] mx-auto; }
+}
